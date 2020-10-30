@@ -123,6 +123,7 @@ function formToData(formEl) {
           break;
         case 'radio':
           skipNames.push(name);
+          data[name] = "";
           $formEl.find(`input[name="${name}"]`).each((index, el) => {
             if (el.checked) data[name] = el.value;
           });
